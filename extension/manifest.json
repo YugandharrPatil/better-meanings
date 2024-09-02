@@ -1,0 +1,12 @@
+{
+	"manifest_version": 3,
+	"name": "Better Meanings Extension",
+	"version": "1.0",
+	"permissions": ["contextMenus", "activeTab", "scripting"],
+	"background": {
+		"service_worker": "background.js"
+	},
+	"icons": {
+		"16": "icons/sanity.png"
+	}
+}
