@@ -1,0 +1,21 @@
+{
+	"name": "better-meanings",
+	"version": "1.0.0",
+	"description": "",
+	"main": "./dist/out.js",
+	"type": "module",
+	"scripts": {
+		"build": "tsc"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/chrome": "^0.0.287",
+		"chrome-types": "^0.1.327",
+		"typescript": "^5.7.2"
+	},
+	"dependencies": {
+		"axios": "^1.7.9"
+	}
+}
