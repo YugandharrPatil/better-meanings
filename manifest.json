@@ -1,23 +1,24 @@
 {
-  "manifest_version": 3,
-  "name": "Better Meanings",
-  "version": "1.0",
-  "permissions": ["contextMenus", "activeTab", "scripting"],
-  "background": {
-    "service_worker": "dist/background.js",
-    "type": "module"
-  },
-  "icons": {
-    "16": "icons/sanity.png"
-  },
-  "action": {
-    "default_popup": "popup.html",
-    "default_icon": "icons/sanity.png"
-  },
-  "content_scripts": [
-    {
-      "js": ["dist/content.js"],
-      "matches": ["https://*.wikipedia.org/wiki/*"]
-    }
-  ]
+	"manifest_version": 3,
+	"name": "Better Meanings",
+	"version": "1.0",
+	"permissions": ["contextMenus", "activeTab", "scripting", "storage"],
+	"background": {
+		"service_worker": "dist/service-worker.js",
+		"type": "module"
+	},
+	"icons": {
+		"16": "icons/sanity.png"
+	},
+	"action": {
+		"default_popup": "popup.html",
+		"default_icon": "icons/sanity.png"
+	},
+	"content_scripts": [
+		{
+			"js": ["dist/content-script.js"],
+			"matches": ["https://*.wikipedia.org/wiki/*"]
+		}
+	],
+	"host_permissions": ["http://localhost/*", "http://127.0.0.1/*"]
 }
